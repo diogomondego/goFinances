@@ -1,6 +1,8 @@
 import React from 'react'
-import { Button } from '../../Components/Form/Button'
+
 import { Input } from '../../Components/Form/Input'
+import { Button } from '../../Components/Form/Button'
+import { TransactionTypeButton } from '../../Components/Form/TransactionTypeButton'
 
 import { 
   Container,
@@ -24,6 +26,11 @@ export function Register () {
           />
           <Input
             placeholder="Preço"
+          />
+          
+          <TransactionTypeButton 
+            type='up'
+            title={'Incoming'}
           />
         </Fields>
 
