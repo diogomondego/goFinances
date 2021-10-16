@@ -1,11 +1,13 @@
 import React from 'react'
+import { Button } from '../../Components/Form/Button'
 import { Input } from '../../Components/Form/Input'
 
 import { 
   Container,
-  Form,
   Header,
   Title,
+  Form,
+  Fields,
 } from './styles'
 
 export function Register () {
@@ -16,12 +18,16 @@ export function Register () {
       </Header>
 
       <Form>
-        <Input
-          placeholder="Nome"
-        />
-        <Input
-          placeholder="Preço"
-        />
+        <Fields>
+          <Input
+            placeholder="Nome"
+          />
+          <Input
+            placeholder="Preço"
+          />
+        </Fields>
+
+        <Button title='Enviar' />
       </Form>
     </Container>
   )
