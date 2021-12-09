@@ -76,7 +76,11 @@ export function Register () {
         <Button title='Enviar' />
       </Form>
 
-      <Modal visible={categoryModalOpen} animationType='slide'>
+      <Modal 
+        visible={categoryModalOpen} 
+        animationType='slide' 
+        statusBarTranslucent
+      >
         <CategorySelect 
           category={category}
           setCategory={setCategory}
