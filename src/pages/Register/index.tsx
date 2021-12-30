@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Alert, Keyboard, Modal, TouchableNativeFeedback } from 'react-native'
+import { Alert, Keyboard, Modal, TouchableWithoutFeedback } from 'react-native'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -31,6 +31,7 @@ const schema = yup.object({
     .number()
     .typeError('Informe um valor numérico')
     .positive('O valor não pode ser negativo')
+    .required('Preço é obrigatório')
 }).required();
 
 export function Register () {
@@ -80,7 +81,7 @@ export function Register () {
   }
 
   return (
-    <TouchableNativeFeedback onPress={Keyboard.dismiss}>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Container>
         <Header>
           <Title>Cadastro</Title>
@@ -142,6 +143,6 @@ export function Register () {
           />
         </Modal>
       </Container>
-    </TouchableNativeFeedback>
+    </TouchableWithoutFeedback>
   )
 }
